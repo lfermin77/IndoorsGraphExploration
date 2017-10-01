@@ -32,7 +32,8 @@ int main(){
     for( int i=0; i<graphs.size(); ++i ) {
       std::string name;
       char n[256];
-      sprintf(n,"%05d\0",i);
+//      sprintf(n,"%05d\0",i);
+      sprintf(n,"%05d",i);
       name += "matlab/floorplan_";
       name += n;
       name += ".txt";

@@ -1,6 +1,14 @@
 cmake_minimum_required(VERSION 2.8)
 Project(LibFloorPlan)
 get_filename_component(PROJECT_ROOT . ABSOLUTE)
+
+
+set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
+
+find_package(Eigen3 REQUIRED)
+include_directories(EIGEN3_INCLUDE_DIR)
+
+
 # You can prepare verbose Makefile to see what's going.
 set(CMAKE_VERBOSE_MAKEFILE false)
 # Set build type
@@ -13,3 +21,4 @@ SET(CMAKE_BINARY_DIR ${OUTPUT})
 add_subdirectory(./src/lib)
 add_subdirectory(./src/test)
 add_subdirectory(./src/genmatlab)
+
