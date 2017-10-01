@@ -4,7 +4,7 @@
 #include "GraphStatistics.hpp"
 #include "GraphFileOperations.hpp"
 
-//#include <Eigen/Core>
+#include <Eigen/Core>
 
 #define value -1;
 

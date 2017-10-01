@@ -6,7 +6,7 @@ get_filename_component(PROJECT_ROOT . ABSOLUTE)
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 
 find_package(Eigen3 REQUIRED)
-include_directories(EIGEN3_INCLUDE_DIR)
+include_directories(${EIGEN3_INCLUDE_DIR})
 
 
 # You can prepare verbose Makefile to see what's going.
