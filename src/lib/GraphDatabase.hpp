@@ -21,10 +21,7 @@ class GraphDatabase
 {
 private:
 
-    /**
-      * List of all graphs in this dataset
-      */
-    std::vector<floorplanGraph> _graphs;
+
 
     /**
       * Graph properties
@@ -32,6 +29,12 @@ private:
     std::vector<graphProperties> _graphProperties;
 
 public:
+    /**
+      * List of all graphs in this dataset
+      */
+    std::vector<floorplanGraph> _graphs;
+
+
     GraphDatabase();
 
     /**

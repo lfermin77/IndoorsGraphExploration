@@ -3,6 +3,7 @@
 #include "GraphDatabase.hpp"
 #include "GraphStatistics.hpp"
 #include "GraphFileOperations.hpp"
+#include "graphNavigation.hpp"
 
 using namespace std;
 using namespace floorplan;
@@ -10,44 +11,80 @@ using namespace floorplan;
 int main(){
  GraphDatabase D;
 
+
+
  // Use "floor" for the KTH dataset
  // and "MITquest" for the MIT dataset
- // Load the KTH dataset
- D.loadGraphs("kth_dataset", "floor");
+ // Load the KTH dataset 
+ D.loadGraphs("/home/unizar/Downloads/KTH_CampusValhallavagen_Floorplan_Dataset_RAW", "floor");
 
  // Load the MIT dataset
- D.loadGraphs("maps.csail.mit.edu", "MITquest");
+// D.loadGraphs("/home/unizar/Downloads/MIT_Dataset/projects.csail.mit.edu/stata/floorplans", "MITquest");
 
- GraphStatistics stat1(&D);
- stat1.printGraphDatabaseStatistics();
- stat1.generateCategoryCountDist();
- stat1.saveDistToFile("raw_categorycountdist.txt", stat1.getCategoryCountDist());
+
+// D.loadGraphs("maps.csail.mit.edu", "MITquest");
+
+
 
  D.Init();
- GraphStatistics stat2(&D);
- stat2.printGraphDatabaseStatistics();
-    return 1;
 
-//    D.Load("corpus_processed.dat");
-    D.Load("corpus_raw.dat");
+   
+   
+   		    cout << "Graphs Loaded: "<< D._graphs.size() << " ! "<< endl << endl;
 
-    GraphStatistics stat(&D);
-//    stat.printGraphDatabaseStatistics();
-//    stat.createFileAttributesList();
-//    stat.createFilePairwiseCounts();
-//    return 1;
+//*
+//   for (unsigned int i=0; i < D._graphs.size(); i++){
+   for (unsigned int i=0; i < 5; i++){
+        int a=1;
+        
+        std::set<std::string> edge_Set;
+        std::map<std::string, int> id_map;
+		std::vector<std::set<int> > edge_vectors;
 
-  //  stat.generateAreaDist();
-    stat.generateDegreeDistByLabel();
-    stat.generateCategoryCountDist();
-    stat.generateAverageGraphPathLengthDist();
-    stat.generateDegreeDistribution();
-   // stat.calculateAverageClusterCoeffient();
-    //stat.saveDistToFile("raw_areadist.txt", stat.getAreaDist());
-   // stat.saveDistToFile("tmp/raw_degreedist.txt", stat.getDegreeDist());
-    stat.saveDistToFile("raw_MIT_categorycountdist.txt", stat.getCategoryCountDist());
-   // stat.saveDistToFile("tmp/raw_averagedegree.txt", stat.getAveragePathLength());
-   // stat.saveDistToFile("raw_degreedistribution.txt",stat.getDegreeDistribution());
-    cout << "cluster coeff " << stat.getAverageClusterCoefficient() << endl;
+        
+        int counter=0;
+        
+        
+		BGL_FORALL_EDGES(e, D._graphs[i], floorplanGraph){
+			Vertex sourceVertex = boost::source(e, D._graphs[i]);
+			Vertex targetVertex = boost::target(e, D._graphs[i]);
+			
+			std::string source_id = D._graphs[i][sourceVertex].vertex_id;
+			std::string target_id = D._graphs[i][targetVertex].vertex_id;
+			
+			std::map<std::string, int>::iterator map_iter; 
+			
+			/////////////////////////////////////// 
+			map_iter = id_map.find(source_id);
+
+			if(map_iter == id_map.end() ){//empty
+				id_map[source_id]=counter;
+				counter++;
+			}
+			
+			
+			map_iter = id_map.find(target_id);
+
+			if(map_iter == id_map.end() ){//empty
+				id_map[target_id]=counter;
+				counter++;
+			}				
+			///////////////////////////
+//			std::set<int> edge_int(id_map[source_id], id_map[target_id]);
+		//	edge_vectors.push_back(edge_int);
+
+			/////////////////////////////
+//			cout << "Edge in graph " << D._graphs[i][sourceVertex].vertex_id << " " << D._graphs[i][targetVertex].vertex_id << endl;
+//			cout << sourceVertex << " " << targetVertex << endl;
+
+//			cout << D._graphs[i][sourceVertex].vertex_id << " " << D._graphs[i][targetVertex].vertex_id << endl;
+			cout << id_map[source_id] << " " << id_map[target_id] << endl;
+
+		}
+		    cout << "Graph "<< i << " done "<< endl << endl;
+    }
+   
+   //*/
+    cout << "it is over friend" << endl;
     return 0;
 }
