@@ -204,6 +204,30 @@ GraphStatistics.cpp.s:
 	cd /home/unizar/Program_Files/IndoorsGraphExploration/build && $(MAKE) -f src/lib/CMakeFiles/floorplan.dir/build.make src/lib/CMakeFiles/floorplan.dir/GraphStatistics.cpp.s
 .PHONY : GraphStatistics.cpp.s
 
+graphNavigation.o: graphNavigation.cpp.o
+.PHONY : graphNavigation.o
+
+# target to build an object file
+graphNavigation.cpp.o:
+	cd /home/unizar/Program_Files/IndoorsGraphExploration/build && $(MAKE) -f src/lib/CMakeFiles/floorplan.dir/build.make src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.o
+.PHONY : graphNavigation.cpp.o
+
+graphNavigation.i: graphNavigation.cpp.i
+.PHONY : graphNavigation.i
+
+# target to preprocess a source file
+graphNavigation.cpp.i:
+	cd /home/unizar/Program_Files/IndoorsGraphExploration/build && $(MAKE) -f src/lib/CMakeFiles/floorplan.dir/build.make src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.i
+.PHONY : graphNavigation.cpp.i
+
+graphNavigation.s: graphNavigation.cpp.s
+.PHONY : graphNavigation.s
+
+# target to generate assembly for a file
+graphNavigation.cpp.s:
+	cd /home/unizar/Program_Files/IndoorsGraphExploration/build && $(MAKE) -f src/lib/CMakeFiles/floorplan.dir/build.make src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.s
+.PHONY : graphNavigation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -223,6 +247,9 @@ help:
 	@echo "... GraphStatistics.o"
 	@echo "... GraphStatistics.i"
 	@echo "... GraphStatistics.s"
+	@echo "... graphNavigation.o"
+	@echo "... graphNavigation.i"
+	@echo "... graphNavigation.s"
 .PHONY : help
 
 

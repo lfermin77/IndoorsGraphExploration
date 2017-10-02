@@ -4,32 +4,57 @@
 #include "GraphStatistics.hpp"
 #include "GraphFileOperations.hpp"
 
-#include <Eigen/Core>
+#include <Eigen/Dense>
 
-#define value -1;
+
 
 using namespace std;
 using namespace floorplan;
 
 
 
-int function_out(void){
-	int a=1;
-	return a;
-}
+class graphNavigation{
+public:
+	graphNavigation();
+	friend std::ostream& operator<<(std::ostream& os, graphNavigation& Graph);
 
-std::vector< std::set<int> > edge_list2conection_list( std::vector<std::set<int> > edge_vector){
-	int a=0;
+	double optimal_average_info;
+	double euler_average_info;
+	double current_average_info;
+
+
+	std::vector<int> path;
+
+	void Navigate(void);
+	// Set variables
+	void set_information_index(double value){information_index=value;};
+	void set_starting_vertex(double value){starting_vertex=value;};	
+	void set_edges_vector(std::vector<std::set<int> > value);
 	
-	std::vector< std::set<int> > connection_list;
 	
-	return connection_list;
-}
+	//Get Variables
+	
+	
+	//Calculations
+	void calc_optimal_average_info(void);
+	void calc_euler_average_info(void);
+	void calc_current_average_info(void);
 
-std::vector<int> Graph_Navigation(std::vector< std::set<int> > edge_vector_in, int starting_vertex);
 
-double optimal_average_info(std::vector<std::set<int> > edge_vector);
 
-double euler_average_info(std::vector<std::set<int> > edge_vector);
+private:
+	double information_index;
+	std::vector< std::set<int> > edges_vector;
+	std::map<int, std::set<int> > connection_list;
+	int number_of_vertices;
 
-double current_average_info(std::vector<std::set<int> > edge_vector);
+	int starting_vertex;
+	
+	Eigen::MatrixXd Laplacian_Euler;
+//	Eigen::Matrix< complex<double>, 1, Eigen::Dynamic>   Laplacian_Euler_eigenvalues;
+	Eigen::VectorXd   Laplacian_Euler_eigenvalues;
+	
+	void edge_list2conection_list(void);
+};
+
+

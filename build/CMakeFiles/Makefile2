@@ -77,7 +77,7 @@ src/lib/preinstall:
 src/lib/CMakeFiles/floorplan.dir/all:
 	$(MAKE) -f src/lib/CMakeFiles/floorplan.dir/build.make src/lib/CMakeFiles/floorplan.dir/depend
 	$(MAKE) -f src/lib/CMakeFiles/floorplan.dir/build.make src/lib/CMakeFiles/floorplan.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/unizar/Program_Files/IndoorsGraphExploration/build/CMakeFiles  2 3
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/unizar/Program_Files/IndoorsGraphExploration/build/CMakeFiles  2 3 4
 	@echo "Built target floorplan"
 .PHONY : src/lib/CMakeFiles/floorplan.dir/all
 
@@ -87,7 +87,7 @@ all: src/lib/CMakeFiles/floorplan.dir/all
 
 # Build rule for subdir invocation for target.
 src/lib/CMakeFiles/floorplan.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/unizar/Program_Files/IndoorsGraphExploration/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unizar/Program_Files/IndoorsGraphExploration/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 src/lib/CMakeFiles/floorplan.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/unizar/Program_Files/IndoorsGraphExploration/build/CMakeFiles 0
 .PHONY : src/lib/CMakeFiles/floorplan.dir/rule
@@ -137,7 +137,7 @@ all: src/test/CMakeFiles/APITest.dir/all
 
 # Build rule for subdir invocation for target.
 src/test/CMakeFiles/APITest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/unizar/Program_Files/IndoorsGraphExploration/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unizar/Program_Files/IndoorsGraphExploration/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 src/test/CMakeFiles/APITest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/unizar/Program_Files/IndoorsGraphExploration/build/CMakeFiles 0
 .PHONY : src/test/CMakeFiles/APITest.dir/rule
@@ -177,7 +177,7 @@ src/genmatlab/preinstall:
 src/genmatlab/CMakeFiles/genmatlab.dir/all: src/lib/CMakeFiles/floorplan.dir/all
 	$(MAKE) -f src/genmatlab/CMakeFiles/genmatlab.dir/build.make src/genmatlab/CMakeFiles/genmatlab.dir/depend
 	$(MAKE) -f src/genmatlab/CMakeFiles/genmatlab.dir/build.make src/genmatlab/CMakeFiles/genmatlab.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/unizar/Program_Files/IndoorsGraphExploration/build/CMakeFiles  4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/unizar/Program_Files/IndoorsGraphExploration/build/CMakeFiles  5
 	@echo "Built target genmatlab"
 .PHONY : src/genmatlab/CMakeFiles/genmatlab.dir/all
 
@@ -187,7 +187,7 @@ all: src/genmatlab/CMakeFiles/genmatlab.dir/all
 
 # Build rule for subdir invocation for target.
 src/genmatlab/CMakeFiles/genmatlab.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/unizar/Program_Files/IndoorsGraphExploration/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unizar/Program_Files/IndoorsGraphExploration/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 src/genmatlab/CMakeFiles/genmatlab.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/unizar/Program_Files/IndoorsGraphExploration/build/CMakeFiles 0
 .PHONY : src/genmatlab/CMakeFiles/genmatlab.dir/rule

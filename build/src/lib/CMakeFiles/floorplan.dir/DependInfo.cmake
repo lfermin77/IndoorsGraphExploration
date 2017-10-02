@@ -6,6 +6,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
 SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/unizar/Program_Files/IndoorsGraphExploration/src/lib/GraphDatabase.cpp" "/home/unizar/Program_Files/IndoorsGraphExploration/build/src/lib/CMakeFiles/floorplan.dir/GraphDatabase.cpp.o"
   "/home/unizar/Program_Files/IndoorsGraphExploration/src/lib/GraphStatistics.cpp" "/home/unizar/Program_Files/IndoorsGraphExploration/build/src/lib/CMakeFiles/floorplan.dir/GraphStatistics.cpp.o"
+  "/home/unizar/Program_Files/IndoorsGraphExploration/src/lib/graphNavigation.cpp" "/home/unizar/Program_Files/IndoorsGraphExploration/build/src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1,6 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/floorplan.dir/GraphStatistics.cpp.o"
   "CMakeFiles/floorplan.dir/GraphDatabase.cpp.o"
+  "CMakeFiles/floorplan.dir/graphNavigation.cpp.o"
   "libfloorplan.pdb"
   "libfloorplan.a"
 )

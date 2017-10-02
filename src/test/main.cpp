@@ -70,21 +70,33 @@ int main(){
 				counter++;
 			}				
 			///////////////////////////
-//			std::set<int> edge_int(id_map[source_id], id_map[target_id]);
-		//	edge_vectors.push_back(edge_int);
+			std::set<int> edge_int;
+			edge_int.insert(id_map[source_id]);
+			edge_int.insert(id_map[target_id]);
+			edge_vectors.push_back(edge_int);
 
 			/////////////////////////////
 //			cout << "Edge in graph " << D._graphs[i][sourceVertex].vertex_id << " " << D._graphs[i][targetVertex].vertex_id << endl;
 //			cout << sourceVertex << " " << targetVertex << endl;
 
 //			cout << D._graphs[i][sourceVertex].vertex_id << " " << D._graphs[i][targetVertex].vertex_id << endl;
-			cout << id_map[source_id] << " " << id_map[target_id] << endl;
+//			cout << id_map[source_id] << " " << id_map[target_id] << endl;
 
 		}
-		    cout << "Graph "<< i << " done "<< endl << endl;
+		
+		graphNavigation NavGraph;
+		NavGraph.set_edges_vector(edge_vectors);
+
+	    cout << NavGraph;		
+	    cout << "Graph "<< i << " done "<< endl << endl;
+
     }
    
    //*/
+   
+   
+   
+   
     cout << "it is over friend" << endl;
     return 0;
 }

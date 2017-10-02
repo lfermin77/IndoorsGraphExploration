@@ -98,16 +98,41 @@ src/lib/CMakeFiles/floorplan.dir/GraphDatabase.cpp.o.provides: src/lib/CMakeFile
 
 src/lib/CMakeFiles/floorplan.dir/GraphDatabase.cpp.o.provides.build: src/lib/CMakeFiles/floorplan.dir/GraphDatabase.cpp.o
 
+src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.o: src/lib/CMakeFiles/floorplan.dir/flags.make
+src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.o: ../src/lib/graphNavigation.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/unizar/Program_Files/IndoorsGraphExploration/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.o"
+	cd /home/unizar/Program_Files/IndoorsGraphExploration/build/src/lib && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/floorplan.dir/graphNavigation.cpp.o -c /home/unizar/Program_Files/IndoorsGraphExploration/src/lib/graphNavigation.cpp
+
+src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/floorplan.dir/graphNavigation.cpp.i"
+	cd /home/unizar/Program_Files/IndoorsGraphExploration/build/src/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/unizar/Program_Files/IndoorsGraphExploration/src/lib/graphNavigation.cpp > CMakeFiles/floorplan.dir/graphNavigation.cpp.i
+
+src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/floorplan.dir/graphNavigation.cpp.s"
+	cd /home/unizar/Program_Files/IndoorsGraphExploration/build/src/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/unizar/Program_Files/IndoorsGraphExploration/src/lib/graphNavigation.cpp -o CMakeFiles/floorplan.dir/graphNavigation.cpp.s
+
+src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.o.requires:
+.PHONY : src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.o.requires
+
+src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.o.provides: src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.o.requires
+	$(MAKE) -f src/lib/CMakeFiles/floorplan.dir/build.make src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.o.provides.build
+.PHONY : src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.o.provides
+
+src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.o.provides.build: src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.o
+
 # Object files for target floorplan
 floorplan_OBJECTS = \
 "CMakeFiles/floorplan.dir/GraphStatistics.cpp.o" \
-"CMakeFiles/floorplan.dir/GraphDatabase.cpp.o"
+"CMakeFiles/floorplan.dir/GraphDatabase.cpp.o" \
+"CMakeFiles/floorplan.dir/graphNavigation.cpp.o"
 
 # External object files for target floorplan
 floorplan_EXTERNAL_OBJECTS =
 
 src/lib/libfloorplan.a: src/lib/CMakeFiles/floorplan.dir/GraphStatistics.cpp.o
 src/lib/libfloorplan.a: src/lib/CMakeFiles/floorplan.dir/GraphDatabase.cpp.o
+src/lib/libfloorplan.a: src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.o
 src/lib/libfloorplan.a: src/lib/CMakeFiles/floorplan.dir/build.make
 src/lib/libfloorplan.a: src/lib/CMakeFiles/floorplan.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C static library libfloorplan.a"
@@ -120,6 +145,7 @@ src/lib/CMakeFiles/floorplan.dir/build: src/lib/libfloorplan.a
 
 src/lib/CMakeFiles/floorplan.dir/requires: src/lib/CMakeFiles/floorplan.dir/GraphStatistics.cpp.o.requires
 src/lib/CMakeFiles/floorplan.dir/requires: src/lib/CMakeFiles/floorplan.dir/GraphDatabase.cpp.o.requires
+src/lib/CMakeFiles/floorplan.dir/requires: src/lib/CMakeFiles/floorplan.dir/graphNavigation.cpp.o.requires
 .PHONY : src/lib/CMakeFiles/floorplan.dir/requires
 
 src/lib/CMakeFiles/floorplan.dir/clean:
