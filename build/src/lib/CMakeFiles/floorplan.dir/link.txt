@@ -1,2 +1,0 @@
-/usr/bin/ar cr libfloorplan.a  CMakeFiles/floorplan.dir/GraphStatistics.cpp.o CMakeFiles/floorplan.dir/GraphDatabase.cpp.o CMakeFiles/floorplan.dir/graphNavigation.cpp.o
-/usr/bin/ranlib libfloorplan.a

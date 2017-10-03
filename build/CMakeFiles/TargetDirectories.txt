@@ -1,3 +1,0 @@
-/home/unizar/Program_Files/IndoorsGraphExploration/build/src/test/CMakeFiles/APITest.dir
-/home/unizar/Program_Files/IndoorsGraphExploration/build/src/lib/CMakeFiles/floorplan.dir
-/home/unizar/Program_Files/IndoorsGraphExploration/build/src/genmatlab/CMakeFiles/genmatlab.dir

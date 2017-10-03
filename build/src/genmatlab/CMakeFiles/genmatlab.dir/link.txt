@@ -1,1 +1,0 @@
-/usr/bin/c++   -g    CMakeFiles/genmatlab.dir/main.cpp.o  -o genmatlab -rdynamic ../lib/libfloorplan.a -lboost_graph -lboost_serialization 
