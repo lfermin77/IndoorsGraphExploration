@@ -16,14 +16,20 @@ int main(){
  // Use "floor" for the KTH dataset
  // and "MITquest" for the MIT dataset
  // Load the KTH dataset 
-// D.loadGraphs("/home/unizar/Downloads/KTH_CampusValhallavagen_Floorplan_Dataset_RAW", "floor");
- D.loadGraphs("/home/leonardo/Downloads/KTH_CampusValhallavagen_Floorplan_Dataset_RAW", "floor");
+ D.loadGraphs("/home/unizar/Downloads/KTH_CampusValhallavagen_Floorplan_Dataset_RAW", "floor");
+// D.loadGraphs("/home/leonardo/Downloads/KTH_CampusValhallavagen_Floorplan_Dataset_RAW", "floor");
  
  // Load the MIT dataset
 // D.loadGraphs("/home/unizar/Downloads/MIT_Dataset/projects.csail.mit.edu/stata/floorplans", "MITquest");
 
 
 // D.loadGraphs("maps.csail.mit.edu", "MITquest");
+
+  ofstream myfile;
+  myfile.open ("example.txt");
+//  myfile << "Writing this other thing to a file.\n";
+
+
 
 
 
@@ -34,8 +40,8 @@ int main(){
    		    cout << "Graphs Loaded: "<< D._graphs.size() << " ! "<< endl << endl;
 
 //*
-//   for (unsigned int i=0; i < D._graphs.size(); i++){
-   for (unsigned int i=0; i < 5; i++){
+   for (unsigned int i=0; i < D._graphs.size(); i++){
+//   for (unsigned int i=0; i < 5; i++){
         int a=1;
         
         std::set<std::string> edge_Set;
@@ -88,6 +94,8 @@ int main(){
 		
 		graphNavigation NavGraph;
 		NavGraph.set_edges_vector(edge_vectors);
+		
+		  myfile << "Incidence_Matrix{" << i << "} = ["<< NavGraph.get_Incidence_Matrix()  << "]; \n";
 
 	    cout << NavGraph;		
 	    cout << "Graph "<< i << " done "<< endl << endl;
@@ -100,5 +108,6 @@ int main(){
    
    
     cout << "it is over friend" << endl;
+      myfile.close();
     return 0;
 }

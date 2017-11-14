@@ -30,7 +30,7 @@ public:
 	void set_information_index(double value){information_index=value;};
 	void set_starting_vertex(double value){starting_vertex=value;};	
 	void set_edges_vector(std::vector<std::set<int> > value);
-	
+	Eigen::MatrixXd get_Incidence_Matrix(void){return Incidence_Matrix;};
 	
 	
 	//Get Variables
