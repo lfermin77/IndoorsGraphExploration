@@ -32,6 +32,7 @@ public:
 	void set_edges_vector(std::vector<std::set<int> > value);
 	
 	
+	
 	//Get Variables
 	
 	
@@ -39,6 +40,7 @@ public:
 	void calc_optimal_average_info(void);
 	void calc_euler_average_info(void);
 	void calc_current_average_info(void);
+	void calc_incidence_matrix(void);
 
 
 
@@ -47,10 +49,12 @@ private:
 	std::vector< std::set<int> > edges_vector;
 	std::map<int, std::set<int> > connection_list;
 	int number_of_vertices;
+	int number_of_edges;
 
 	int starting_vertex;
 	
 	Eigen::MatrixXd Laplacian_Euler;
+	Eigen::MatrixXd Incidence_Matrix;
 //	Eigen::Matrix< complex<double>, 1, Eigen::Dynamic>   Laplacian_Euler_eigenvalues;
 	Eigen::VectorXd   Laplacian_Euler_eigenvalues;
 	

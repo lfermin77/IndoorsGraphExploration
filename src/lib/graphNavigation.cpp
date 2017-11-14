@@ -50,8 +50,10 @@ std::ostream& operator<<(std::ostream& os, graphNavigation& Graph){
 
 void graphNavigation::set_edges_vector(std::vector<std::set<int> > value){
 	edges_vector = value; 
+	number_of_edges = edges_vector.size();
 	edge_list2conection_list();
 	calc_euler_average_info();
+	calc_incidence_matrix();	
 }
 
 
@@ -105,6 +107,27 @@ void graphNavigation::calc_euler_average_info(void){
 	if(Laplacian_Euler_eigenvalues(1) < 1e-10){
 		cout << "Graph is not Connected!!! " << endl;
 	}
+	
+}
+
+
+
+void graphNavigation::calc_incidence_matrix(void){
+	int a=1;
+	
+	
+	Incidence_Matrix = Eigen::MatrixXd::Zero(number_of_edges, number_of_vertices);
+	
+	for(int i=0;i <number_of_edges;i++){
+		int first = *(edges_vector[i].begin() );
+		int second = *(edges_vector[i].rbegin() );
+		
+		Incidence_Matrix(i,first)=-1;
+		Incidence_Matrix(i,second)=1;
+	}
+	cout << "Incidence Matrix \n"<< Incidence_Matrix << endl;
+	
+
 	
 }
 
