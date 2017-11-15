@@ -16,8 +16,8 @@ int main(){
  // Use "floor" for the KTH dataset
  // and "MITquest" for the MIT dataset
  // Load the KTH dataset 
- D.loadGraphs("/home/unizar/Downloads/KTH_CampusValhallavagen_Floorplan_Dataset_RAW", "floor");
-// D.loadGraphs("/home/leonardo/Downloads/KTH_CampusValhallavagen_Floorplan_Dataset_RAW", "floor");
+// D.loadGraphs("/home/unizar/Downloads/KTH_CampusValhallavagen_Floorplan_Dataset_RAW", "floor");
+ D.loadGraphs("/home/leonardo/Downloads/KTH_CampusValhallavagen_Floorplan_Dataset_RAW", "floor");
  
  // Load the MIT dataset
 // D.loadGraphs("/home/unizar/Downloads/MIT_Dataset/projects.csail.mit.edu/stata/floorplans", "MITquest");
@@ -26,7 +26,7 @@ int main(){
 // D.loadGraphs("maps.csail.mit.edu", "MITquest");
 
   ofstream myfile;
-  myfile.open ("example.txt");
+  myfile.open ("Incidences.m");
 //  myfile << "Writing this other thing to a file.\n";
 
 
@@ -95,7 +95,7 @@ int main(){
 		graphNavigation NavGraph;
 		NavGraph.set_edges_vector(edge_vectors);
 		
-		  myfile << "Incidence_Matrix{" << i << "} = ["<< NavGraph.get_Incidence_Matrix()  << "]; \n";
+		  myfile << "Incidence_Matrix{" << i+1 << "} = ["<< NavGraph.get_Incidence_Matrix()  << "]; \n";
 
 	    cout << NavGraph;		
 	    cout << "Graph "<< i << " done "<< endl << endl;
